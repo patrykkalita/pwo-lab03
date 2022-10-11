@@ -7,6 +7,7 @@ import java.io.IOException;
 
 public class Zadanie1 {
 
+    
     public static final int FROM = 0, TO = 100;
     public static final String FILE_NAME = "fibseq100.txt";
 
@@ -23,5 +24,21 @@ public class Zadanie1 {
         } else {
             System.out.println("Błąd");
         }
+        
+        System.out.println("Lucas");
+        
+        LucasGenerator lucasGenerator = new LucasGenerator();
+        
+        boolean isOk = SequenceTools.writeLucas(lucasGenerator);
+
+        if (isOk) {
+            System.out.println("Wynik zapisany do pliku: " + "Lucas.txt");
+        } else {
+            System.out.println("Błąd");
+        }
     }
+    
+    
+    
+    
 }

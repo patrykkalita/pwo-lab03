@@ -21,4 +21,17 @@ public class SequenceTools {
         }
         return true;
     }
+    
+    public static boolean writeLucas(LucasGenerator generator) {
+        try {
+                BufferedWriter writer = new BufferedWriter(new FileWriter("Lucas.txt"));
+                for (int i = 1; i <= 100; i++) {
+                    writer.write(generator.lucas(i) + "\n");
+                }
+                writer.close();
+            } catch (IOException ex) {
+                return false;
+            }
+        return true;
+    }
 }
